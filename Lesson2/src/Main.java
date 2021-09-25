@@ -1,5 +1,7 @@
 public class Main {
 
+    private static int global = 100;
+
     public static void main(String[] args) {
 
         int a = 10;
@@ -56,8 +58,41 @@ public class Main {
         System.out.println(result);
 
 
+        a = -5;
+        a = ~a;
+        a = a + 1;
+        System.out.println("5 is:" + a);
+
+        int[] arr = new int[5];
+        int[] array = {1,2,3,4,5};
+        System.out.println(array[1]);
+
+
+        char[] name = {'a','b','c','d'};
+        for (Character ch : name){
+            System.out.println(ch);
+        }
+
+        System.out.println(name);
+//        System.out.println(name.toString()); not working
+
+        String firstName = "Roger";
+        String lastName = "Yu";
+        String myName = firstName + lastName;
+        System.out.println(myName);
+        printName(myName);
+
+        NameClass newName = new NameClass("Roger","Yu");
+        newName.firstName = "Rog";
+        System.out.println(newName.firstName);
+
+
 
 
     }// End of main function
+
+    private static void printName(String theName) {
+        System.out.println(theName + global);
+    }
 
 }// End of the class
